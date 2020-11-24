@@ -1,23 +1,29 @@
 import React from "react";
+import Traffic from "./Traffic.jsx";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
+		<div>
+			<h1 className="title">
+				<i className="fab fa-react" /> Traffic Light{" "}
+				<i className="fab fa-react" />
+			</h1>
+
+			<div className="row justify-content-center">
+				<div className=" trafficLight">
+					<Traffic />
+				</div>
+			</div>
+
 			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
+				The light glows when clicked.The whole purpose of the component
+				is displaying a traffic light with red, yellow and green lights.
+				When any light is clicked (selected) it has to glow, but the
+				other lights have to stop glowing. The component has a hooked
+				state variable that tracks the color.
 			</p>
 		</div>
 	);
